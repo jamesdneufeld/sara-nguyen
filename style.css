@@ -12,6 +12,11 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  background-color: #FFF98C;
+}
+
+
 /* Brand Colours & Typography */
 :root {
   --body-typeface: 'Space Grotesk', sans-serif;
@@ -20,7 +25,7 @@ html {
   --headline-typeface: 'Space Grotesk', sans-serif;
   --headline-colour: black;
   --hyperlink-colour: black;
-  --hover-colour: #ffdb58;
+  --hover-colour: #FFF98C;
 }
 
 body {
@@ -36,11 +41,11 @@ body {
 /* Typography */
 
 h1 {
-  font-size: 2.4em;
+  font-size: 2.2em;
   font-weight: 800;
   font-family: var(--headline-typeface);
   color: var(--headline-colour);
-  margin: 0.5em 0em;
+  margin: 1em 0em;
   letter-spacing: 0.01em;
   font-variant-caps: all-small-caps;
 }
@@ -67,9 +72,15 @@ h3 {
 
 
 h4 {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.4em;
   text-align: left;
+  margin-bottom: 1em;
+}
+
+h5{
+  font-size: 1.2em;
+  line-height: 1.4em;
   margin-bottom: 1em;
 }
 
@@ -190,7 +201,7 @@ button:hover {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
   grid-gap: 1rem;
   margin-bottom: 1.5em;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
@@ -200,23 +211,27 @@ button:hover {
 
 .about-experience-recognition {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: black;
-  min-height: 100vh;
+  min-height: 50vh;
   color: white;
   font-size: 0.75rem;
 }
 
 .copyright {
-  background: hotpink;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8em;
+  justify-content: space-between;
+    
 }
 
-::selection {
-  background-color: red;
-}
 
 .footer-grid {
-  width: 100vw;
+  width: 90vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40%, 2fr));
   grid-template-rows: repeat(10, auto);
@@ -227,20 +242,22 @@ button:hover {
 .footer-item {
   position: relative;
   display: inline-block;
-  margin-bottom: 1em;
-  min-width: 30vw;
-  padding: 0em 2em 0em 2em;
+  margin: 2em;
+  min-width: 74vw;
   --hyperlink-colour: white;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
 }
 
+/*
 .footer-socials {
-  font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1em;
   --hyperlink-colour: white;
-
 }
 
+*/
 
 
 
@@ -249,9 +266,8 @@ button:hover {
 .hero {
   background: ;
   width: 100vw;
-  padding: 0em 15em;
-  min-height: 80vh;
-  margin: 1em;
+  padding: 0em 2em;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,6 +277,8 @@ button:hover {
 
 .hero-header {
   text-align: center;
+  margin: 1em 2em;
+  font-size: 0.9em;
 }
 
 
@@ -358,6 +376,29 @@ button:hover {
 
 /* Large Screen Grid Layout */
 @media (min-width: 768px) {
+
+  .hero {
+  background: ;
+  width: 100vw;
+  padding: 0em 15em;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+} 
+  .hero-header {  
+  margin-bottom: 2em;
+  margin-top: -2em;
+  font-size: 1.2em;
+}
+    
+.work-grid {
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    
+ }
+    
   .project {
     flex-direction: row;
   }
@@ -406,13 +447,25 @@ button:hover {
   }
 
   .footer-grid {
-    width: 75vw;
-    margin-bottom: 2em;
+    width: 30vw;
+    margin: 2em 0em 2em 0em;
   }
 
   .footer-item {
-    margin-bottom: 0em;
-    margin-top: 1.2em;
+    min-width: 28vw;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-bottom: 1em;
   }
 
+  .about-experience-recognition {
+    flex-direction: row;
 }
+
+  .copyright {
+    flex-direction: row;
+    text-align: right;
+    }
+    
+}
+
