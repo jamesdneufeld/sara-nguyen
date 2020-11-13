@@ -50,6 +50,10 @@ h1 {
   font-variant-caps: all-small-caps;
 }
 
+.footer-headline {
+  background-color: #fff98c;
+}
+
 h2 {
   font-size: 1.2em;
   font-weight: 600;
@@ -78,7 +82,7 @@ h4 {
   margin-bottom: 1em;
 }
 
-h5{
+h5 {
   font-size: 1.2em;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -226,7 +230,7 @@ button:hover {
   text-align: center;
   font-size: 0.8em;
   justify-content: space-between;
-    
+
 }
 
 
@@ -446,27 +450,28 @@ $duration: 60s;
 @media (min-width: 768px) {
 
   .hero {
-  background: ;
-  width: 100vw;
-  padding: 0em 15em;
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    background: ;
+    width: 100vw;
+    padding: 0em 15em;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-} 
-  .hero-header {  
-  margin-bottom: 2em;
-  margin-top: -2em;
-  font-size: 1.2em;
-}
-    
-.work-grid {
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-    
- }
-    
+  }
+
+  .hero-header {
+    margin-bottom: 2em;
+    margin-top: -2em;
+    font-size: 1.2em;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+
+  }
+
   .project {
     flex-direction: row;
   }
@@ -528,12 +533,11 @@ $duration: 60s;
 
   .about-experience-recognition {
     flex-direction: row;
-}
+  }
 
   .copyright {
     flex-direction: row;
     text-align: right;
-    }
-    
-}
+  }
 
+}
