@@ -1,0 +1,418 @@
+/* Typography imported from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Space+Grotesk|Open+Sans&display=swap");
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Brand Colours & Typography */
+:root {
+  --body-typeface: 'Space Grotesk', sans-serif;
+  --background-colour: white;
+  --body-colour: black;
+  --headline-typeface: 'Space Grotesk', sans-serif;
+  --headline-colour: black;
+  --hyperlink-colour: black;
+  --hover-colour: #ffdb58;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--body-typeface);
+  background: var(--background-colour);
+  color: var(--body-colour);
+
+}
+
+/* Typography */
+
+h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  font-family: var(--headline-typeface);
+  color: var(--headline-colour);
+  margin: 0.5em 0em;
+  letter-spacing: 0.01em;
+  font-variant-caps: all-small-caps;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: var(--headline-typeface);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: black;
+  letter-spacing: 0.02em;
+  font-variant-caps: all-small-caps;
+}
+
+h3 {
+  font-size: 4em;
+  font-weight: 800;
+  font-family: var(--headline-typeface);
+  color: #FFF98C;
+  letter-spacing: 0.03em;
+  font-variant-caps: all-small-caps;
+}
+
+
+h4 {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--hyperlink-colour);
+}
+
+a:hover {
+  color: var(--hover-colour);
+}
+
+/* Responsive Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /* Removes gap below images */
+}
+
+/* Layout */
+
+header,
+footer {
+  padding: 2em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 13vh;
+}
+
+body {
+  background-color: white;
+}
+
+section {
+  background-color: white;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.portfolio,
+.project-grid,
+.about-page {
+  flex: 1;
+}
+
+.portfolio {
+  padding: 1rem;
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  font-family: var(--headline-typeface);
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.12s;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+
+button:hover {
+  background-color: #FFF98C;
+  color: black;
+}
+
+.project-scroll-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+
+/* Overlay */
+
+.project-description-overlay {
+  display: none;
+}
+
+.project-item:hover .project-description-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Work Grid */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1.5em;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+/* Footer */
+
+.about-experience-recognition {
+  display: flex;
+  flex-direction: row;
+  background: black;
+  min-height: 100vh;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.copyright {
+  background: hotpink;
+}
+
+::selection {
+  background-color: red;
+}
+
+.footer-grid {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 2fr));
+  grid-template-rows: repeat(10, auto);
+  flex: 1;
+  margin-bottom: 2em;
+}
+
+.footer-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 30vw;
+  padding: 0em 2em 0em 2em;
+  --hyperlink-colour: white;
+}
+
+.footer-socials {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  --hyperlink-colour: white;
+
+}
+
+
+
+
+/* Hero */
+
+.hero {
+  background: ;
+  width: 100vw;
+  padding: 0em 15em;
+  min-height: 80vh;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.hero-header {
+  text-align: center;
+}
+
+
+
+/* Project Page */
+
+.project-nav {
+  width: 100vw;
+  height: 13vh;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-nav-name {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.sidebar {
+  width: 100vw;
+  padding: 1em 2em;
+  margin-right: 0.1em;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-grid {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  grid-template-rows: repeat(10, auto);
+  flex: 1;
+
+}
+
+.project-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0em;
+}
+
+.project-description {
+  padding: 1em 2em;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+
+/* About Page */
+
+.about-sidebar {
+  width: 100vw;
+  padding: 1em 2em;
+  margin-right: 0.1em;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.about-grid {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70%, 2fr));
+  grid-template-rows: repeat(10, auto);
+  flex: 1;
+  margin-bottom: 2em;
+}
+
+.about-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 30vw;
+  padding: 0em 2em 0em 2em;
+}
+
+.headshot {
+  margin: 2em 0em;
+}
+
+.about-socials {
+  margin: 0.5em 0em;
+}
+
+
+/* Large Screen Grid Layout */
+@media (min-width: 768px) {
+  .project {
+    flex-direction: row;
+  }
+
+  .project-grid {
+    width: 75vw;
+  }
+
+  .sidebar {
+    width: 25vw;
+    height: 60vh;
+    position: sticky;
+    top: 15vh;
+    left: 0;
+  }
+
+  .project-nav {
+    width: 100vw;
+    height: 10vh;
+    padding: 1em 10em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .about-page {
+    flex-direction: row;
+  }
+
+  .about-grid {
+    width: 75vw;
+    margin-bottom: 2em;
+  }
+
+  .about-item {
+    margin-bottom: 0em;
+    margin-top: 1.2em;
+  }
+
+  .about-sidebar {
+    width: 30vw;
+    height: 85vh;
+    top: 15vh;
+    left: 0;
+  }
+
+  .footer-grid {
+    width: 75vw;
+    margin-bottom: 2em;
+  }
+
+  .footer-item {
+    margin-bottom: 0em;
+    margin-top: 1.2em;
+  }
+
+}
